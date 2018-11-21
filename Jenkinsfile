@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('BuildP') {
       steps {
-        bat 'py menu.py'
+        bat(script: 'py Menu.py', returnStatus: true)
       }
     }
     stage('Print') {
